@@ -30,7 +30,7 @@ const handlePostMessage = _throttle((blob) => {
       checkTime
     }
   });
-  
+
   checkTime += waitTime;
 }, waitTime * 1000);
 

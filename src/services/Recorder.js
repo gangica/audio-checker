@@ -195,13 +195,13 @@ class Recorder {
 
     const file = this.getFile({ blob, fileName: `${this.filename}.mp3` });
 
-		console.log('HERE', file, this.filename)
-    
-		if (this.filename === 5) {
-			Socket.instance().post({
-				eventName: 'check-success'
-			})
-		}
+    console.log('HERE', file, this.filename)
+
+    if (this.filename === 5) {
+      Socket.instance().post({
+        eventName: 'check-success'
+      })
+    }
 
     this.filename++;
   };
@@ -269,9 +269,9 @@ class Recorder {
           this.audioWorkletNode = new AudioWorkletNode(this.context, this.workletNodeName, this.workletOptions);
 
           this.source.connect(this.audioWorkletNode).connect(this.context.destination);
-					
+
           this.onWorker();
-					
+
           this.workerRecord.postMessage({
             type: 'init',
             payload: {
@@ -319,10 +319,10 @@ class Recorder {
       this.recordedTimeSecond = 60;
       this.recordedConsecutiveCount = 20;
 
-			console.log('STREAM', stream)
+      console.log('STREAM', stream)
       Socket.instance().connect({
         cbAfterGetData: (data) => {
-					// console.log('socket', data)
+          // console.log('socket', data)
           this.disconnect();
           this.working = false;
           // console.log('success', parent, data);

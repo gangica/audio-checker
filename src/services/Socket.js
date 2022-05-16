@@ -18,11 +18,11 @@ class Socket {
 
   connect = (params = {}) => {
     const {
-			socketUrl = 'http://localhost:5000',
+      socketUrl = 'http://localhost:5000',
       cbAfterGetData = noop,
       onTransportError = noop,
     } = params;
-		
+
     if (!this.socket) {
       this.socket = io(socketUrl, {
         transports: ['websocket']
@@ -44,10 +44,10 @@ class Socket {
         }
       });
 
-			this.socket.on('check-success-client', function (event) {
+      this.socket.on('check-success-client', function (event) {
         console.log('check-success-client', event);
 
-				if (cbAfterGetData) {
+        if (cbAfterGetData) {
           cbAfterGetData({
             eventName: 'check-success-client',
             ...event

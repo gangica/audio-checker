@@ -42,8 +42,8 @@ const App = () => {
 
   const handleSuccess = (data = {}) => {
     if (data?.parent && Object.keys(data.parent)?.length > 0) {
-    setStep(constants.STEP_CHECKER.RESULT);
-    setResponseFromSocket(data);
+      setStep(constants.STEP_CHECKER.RESULT);
+      setResponseFromSocket(data);
     } else {
       handleFail();
     }
@@ -215,7 +215,7 @@ const App = () => {
   };
 
   const background = (
-    <div className={windiClass.bg} style={{ backgroundImage: 'url(/assets/images/bg-mcheck.jpg)' }}/>
+    <div className={windiClass.bg} style={{ backgroundImage: 'url(/assets/images/bg-mcheck.jpg)' }} />
   );
 
   const renderContent = () => {
@@ -252,7 +252,7 @@ const App = () => {
             handleCancel={() => {
               handleCancel({ transitioning: true });
             }}
-            // isOpenWeb={step === constants.STEP_CHECKER.FAIL}
+          // isOpenWeb={step === constants.STEP_CHECKER.FAIL}
           />
         </div>
       )

@@ -147,24 +147,6 @@ const CheckerSuccess = ({ data = {} }) => {
             className="rounded-xl image object-cover absolute relative"
           >
           </img>
-          {/* <Image
-            isScale
-            isSquare
-            imgClassName="rounded-6px absolute inset-0 w-full h-full"
-            src={image}
-            className="rounded-12px image object-cover absolute w-30 h-30 relative"
-            overlayText={(
-              <>
-                <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30"/>
-                <div className={windiClass.logo}>
-                  <Image
-                    src="/assets/images/logo-watermark.png"
-                    className="w-32px h-32px"
-                  />
-                </div>
-              </>
-            )}
-          /> */}
         </div>
         <div className="flex items-center text-left">
           {info}
@@ -185,32 +167,6 @@ const CheckerSuccess = ({ data = {} }) => {
                     className={classNames('inline-block align-middle w-1/2 line-clamp-1 pl-2', {
                       ['cursor-pointer']: value
                     })}
-                    onClick={() => {
-                      let title = 'Sao chép thành công!';
-
-                      if (isPhone) {
-                        title = 'Sao chép số điện thoại thành công!'
-                      }
-
-                      if (isEmail) {
-                        title = 'Sao chép email thành công!'
-                      }
-
-                      // if (value) {
-                      //   copyToClipboard({
-                      //     text: value,
-                      //     onCopy: () => {
-                      //       messageHandler({
-                      //         title,
-                      //         isClose: false,
-                      //         contentClass: '!bg-white',
-                      //         titleClass: '!text-black',
-                      //         transitionClass: '!translate-y-1'
-                      //       })
-                      //     }
-                      //   })
-                      // }
-                    }}
                   >
                     <Icon icon={icon} className="mr-1 !align-text-top"/>
                     <span title={value}>{value || 'Đang cập nhật'}</span>
