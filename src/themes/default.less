@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@cdnUrl: "";
+@font-family: "MCN Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+"Roboto", "Helvetica Neue", Arial, sans-serif;
+
+@color-base: #A3238E;
+@color-hover-base: rgba(163, 35, 142, 0.9);
+@color-white: #fff;
+@color-popup: #282365;
+@color-menu: rgba(255, 255, 255, 0.65);
+@color-form-input: rgba(255, 255, 255, 0.2);
+
+@border-radius-base: 6px;
+@border-radius-overlay: 12px;
+
+@nprogress-color: #A3238E;
+
+@header-height: 48px;
+@header-height-mobile: 64px;
+
+@bg-base: rgba(21, 30, 52, 1);
+// @bg-body: #151e34;
+@bg-body: #141414;
+@bg-overlay: #1c375f;
+@bg-menu: #000000;
+
+:root {
+  --app-header-height: 48px;
+  --app-header-height-mobile: 64px;
+  --app-header-detail-height: 48px;
+  --backdrop-noise-color: @bg-body;
+  --color-cover: #121212;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.display-flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.items-center() {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+}
+
+.play-animation() {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  -webkit-animation-name: spin;
+  animation-name: spin;
+  -webkit-animation-duration: 12s;
+  animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.play-running-anim {
+  .play-animation();
+}
+
+.play-running() {
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.one-line-text {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+}
+
+.two-line-text {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.three-line-text {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,113 @@
+@import '../../themes/default';
+
+.app-icon {
+  svg {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 auto;
+  }
+
+  &.logo-icon {
+    svg {
+      width: auto !important;
+      height: auto !important;
+    }
+  }
+
+  &.video-play-icon {
+    svg {
+      width: 68px;
+      height: 48px;
+
+      path.play-bg {
+        -webkit-transition: fill 0.1s cubic-bezier(0, 0, 0.2, 1), fill-opacity 0.1s cubic-bezier(0, 0, 0.2, 1);
+        transition: fill 0.1s cubic-bezier(0, 0, 0.2, 1), fill-opacity 0.1s cubic-bezier(0, 0, 0.2, 1);
+        fill: #212121;
+        fill-opacity: 0.8;
+      }
+    }
+  }
+}
+
+.app-mini-icon {
+  svg {
+    width: 0.5rem;
+    height: 0.5rem
+  }
+}
+
+.app-small-icon {
+  svg {
+    width: 1.25rem;
+    height: 1.25rem
+  }
+}
+
+.app-medium-icon {
+  svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+.app-large-icon {
+  svg {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+.app-xl-icon {
+  svg {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.app-image {
+  &:hover {
+    .app-icon {
+      &.video-play-icon {
+        svg {
+          path.play-bg {
+            fill: currentColor;
+            //fill: #f00;
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+.app-layout-mobile {
+  .app-icon {
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
+  .app-overlay-icon {
+    .app-icon {
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+
+  .app-small-icon {
+    svg {
+      width: 1rem;
+      height: 1rem
+    }
+  }
+
+  .app-large-icon {
+    svg {
+      width: 2.25rem;
+      height: 2.25rem;
+    }
+  }
+}

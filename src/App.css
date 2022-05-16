@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  width: 420px;
+  margin: 0;
+}
+
+.app-content {
+  background-image: linear-gradient(-45deg, rgb(120, 40, 112), rgb(91, 68, 108));
+  color: white;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(-45deg, rgb(120, 40, 112), rgb(91, 68, 108));
+}
+
+.bg-base {
+  background-color: rgb(163, 35, 142)
+}
+
+.bg-base:hover {
+  background-color: rgba(163, 35, 142, 0.81)
+}
+
+.bg-cancel {
+  background-color: rgba(255, 255, 255, 0.3)
+}
+
+.bg-cancel:hover {
+  background-color: rgba(255, 255, 255, 0.2)
+}
+
+.color-base {
+  color: rgb(163, 35, 142);
+}
+
+.app-logo-anim,
+.app-logo-anim .app-icon svg,
+.app-logo {
+  transition: all 0.3s ease-out;
+}
+
+.app-logo {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation: PopIn 3s ease-out infinite;
+  animation: PopIn 3s ease-out infinite;
+}
+
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+}
+
+.rounded-btn {
+  border-radius: 6px;
+}
+
+@keyframes PopIn {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
